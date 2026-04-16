@@ -1,4 +1,4 @@
-# 🌾 India Agricultural Productivity Analysis
+# India Agricultural Productivity Analysis
 
 <div align="center">
 
@@ -9,17 +9,17 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
-**A comprehensive data visualization & analytics capstone project analyzing Indian agricultural productivity trends and patterns**
+A comprehensive data visualization & analytics capstone project analyzing Indian agricultural productivity trends and patterns.
 
-[Live Dashboard](#-tableau-dashboard) • [View Report](#-reports) • [Explore Notebooks](#-notebooks)
+[Dashboard](#tableau-dashboard) • [Report](#reports) • [Notebooks](#notebooks)
 
 </div>
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
-| 📌 Attribute | 📊 Details |
+| Attribute | Details |
 |---|---|
 | **Project Title** | India Agricultural Productivity Analysis |
 | **Sector** | Agriculture & Agribusiness |
@@ -27,11 +27,11 @@
 | **Institute** | Newton School of Technology |
 | **Program** | Data Visualization & Analytics Capstone |
 | **Duration** | 2-Week Industry Simulation |
-| **Status** | 🔄 In Progress |
+| **Status** | In Progress |
 
-### 👥 Team Members
+### Team Members
 
-| 🎯 Role | 👤 Name | 🔗 GitHub |
+| Role | Name | GitHub |
 |---|---|---|
 | Project Lead | Pushpendra Singh Parihar | [`makeprodigy`](https://github.com/makeprodigy) |
 | Data Lead | Akshit Vats | [`Akshitvats`](https://github.com/Akshitvats) |
@@ -42,21 +42,21 @@
 
 ---
 
-## 🎯 Business Problem & Opportunity
+## Business Problem & Opportunity
 
-Agriculture is the backbone of India's economy, employing over 40% of the workforce. However, productivity fluctuations due to climate variability, soil conditions, and farming practices create significant challenges for policymakers, agricultural agencies, and farmers themselves. This analysis addresses the critical need to understand productivity drivers and identify actionable interventions.
+Agriculture is the backbone of India's economy, employing over 40% of the workforce. However, productivity fluctuations due to climate variability, soil conditions, and farming practices create significant challenges for policymakers, agricultural agencies, and farmers themselves.
 
-**🔍 Core Business Question**
+**Core Business Question**
 > Which states, districts, and crops are underperforming on yield efficiency (production per hectare), how has agricultural productivity trended from 1997 to 2020, and what season-wise and crop-wise patterns should drive targeted policy interventions and area-allocation decisions?
 
-**💡 Decision Supported**
+**Decision Supported**
 > State and central agricultural authorities can: (1) identify high-priority districts for yield-improvement interventions; (2) rationalize crop-area allocation by season and geography; (3) forecast production shortfalls for key staple crops (rice, wheat, pulses); (4) benchmark district-level productivity against national medians to direct NABARD credit and government subsidy flows
 
 ---
 
-## 📊 Dataset Overview
+## Dataset Overview
 
-| 🏷️ Attribute | 📈 Details |
+| Attribute | Details |
 |---|---|
 | **Source** | Crop Production Statistics - India (Kaggle) |
 | **Direct Link** | [https://www.kaggle.com/datasets/nikhilmahajan29/crop-production-statistics-india](https://www.kaggle.com/datasets/nikhilmahajan29/crop-production-statistics-india) |
@@ -66,9 +66,9 @@ Agriculture is the backbone of India's economy, employing over 40% of the workfo
 | **Columns** | 8 core columns |
 | **Format** | CSV (tabular, row-level records) |
 
-### 🔑 Key Features Analyzed
+### Key Features Analyzed
 
-| Column | 📝 Description | 🎲 Role in Analysis |
+| Column | Description | Role in Analysis |
 |---|---|---|
 | **State** | Indian state or union territory | Geographic segmentation & regional benchmarking |
 | **District** | Administrative district | Sub-regional analysis & underperformance identification |
@@ -79,7 +79,7 @@ Agriculture is the backbone of India's economy, employing over 40% of the workfo
 | **Production** | Total output in tonnes | Output metric for growth trends & forecasting |
 | **Yield** | Production per hectare (tonnes/ha) | Primary KPI - Agricultural Productivity Yield Efficiency |
 
-### 🔍 Data Quality & ETL Considerations
+### Data Quality & ETL Considerations
 
 The dataset contains realistic quality issues requiring ETL pipeline attention:
 - **4,948 null values** in Production column (1.43%) — requires imputation or conditional drop
@@ -87,7 +87,7 @@ The dataset contains realistic quality issues requiring ETL pipeline attention:
 - **9 null Crop values** — requires row drop
 - **Extreme outliers** in Yield (max 43,958) and Production (max 1.6 billion) — requires outlier treatment
 
-📖 Full data dictionary available in [`docs/data_dictionary.md`](docs/data_dictionary.md)
+Full data dictionary available in [`docs/data_dictionary.md`](docs/data_dictionary.md)
 
 **Backup Datasets:**
 - Backup 1: Kaggle — "Crop Production in India" (raw, state-level, 1997-2015) — [Link](https://www.kaggle.com/datasets/srinivas1/agriculture-crops-production-in-india)
@@ -95,11 +95,9 @@ The dataset contains realistic quality issues requiring ETL pipeline attention:
 
 ---
 
-## 📈 KPI Framework
+## KPI Framework
 
-## 📈 KPI Framework
-
-| 🎯 KPI | 📊 Definition | 📐 Computation | 📍 Reference |
+| KPI | Definition | Computation | Reference |
 |---|---|---|---|
 | **Yield Efficiency Rate** (Primary KPI) | Production per hectare (tonnes/ha), segmented by State, Crop, Season | `Production ÷ Area` | Identifies high/low-performing regions; guides targeted interventions |
 | **Year-over-Year Production Growth %** | Aggregate production growth tracking India's agricultural acceleration | `((Prod_Year_N - Prod_Year_N-1) / Prod_Year_N-1) × 100` | `notebooks/04_statistical_analysis.ipynb` |
@@ -109,20 +107,20 @@ The dataset contains realistic quality issues requiring ETL pipeline attention:
 
 ---
 
-## 🎨 Tableau Dashboard
+## Tableau Dashboard
 
-| 📍 Component | 📝 Details |
+| Component | Details |
 |---|---|
 | **Dashboard URL** | [View on Tableau Public](#) |
 | **Executive View** | KPI scorecard with state rankings and trend lines |
 | **Operational View** | Detailed crop-by-crop productivity analysis with year filters |
 | **Interactive Features** | State selector, crop filter, year slider, regional heatmap |
 
-📸 Dashboard screenshots available in [`tableau/screenshots/`](tableau/screenshots/)
+Dashboard screenshots available in [`tableau/screenshots/`](tableau/screenshots/)
 
 ---
 
-## 💡 Key Insights
+## Key Insights
 
 1. **Punjab & Haryana Leadership**: Yield efficiency for staple crops (Rice, Wheat, Pulses) has improved significantly in economically advanced states like Punjab and Haryana
 2. **Eastern Underperformance**: Eastern and north-eastern states remain significantly below the national median yield for identical crops
@@ -137,9 +135,9 @@ The dataset contains realistic quality issues requiring ETL pipeline attention:
 
 ---
 
-## 🚀 Recommendations
+## Recommendations
 
-| # | Based On Insight | 📋 Recommendation | 🎯 Expected Impact |
+| # | Based On Insight | Recommendation | Expected Impact |
 |---|---|---|---|
 | 1 | Eastern Underperformance | Transfer best-practice farming techniques from Punjab/Haryana to eastern states through targeted training programs and technology adoption subsidies | Close yield efficiency gap by 25-30% within 3 years for priority crops |
 | 2 | Kharif Dominance & Seasonal Concentration | Develop diversified crop calendars for Rabi season to reduce production concentration and improve supply chain stability for staples | Better seasonal distribution, 15-20% improvement in off-season availability |
@@ -149,9 +147,9 @@ The dataset contains realistic quality issues requiring ETL pipeline attention:
 
 ---
 
-## 🛠️ Quick Start Guide
+## Quick Start Guide
 
-### ⚙️ Local Setup
+### Local Setup
 
 ```bash
 # Create and activate virtual environment
@@ -165,7 +163,7 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-### ☁️ Google Colab Alternative
+### Google Colab Alternative
 
 1. Upload notebooks from `notebooks/` folder
 2. Mount Google Drive for data access
@@ -174,116 +172,112 @@ jupyter notebook
 
 ---
 
-## 📂 Repository Architecture
-
-## 📂 Repository Architecture
+## Repository Architecture
 
 ```
 SectionA_G17_IndiaAgriProductivity/
 │
-├── 📄 README.md                      # Project overview & documentation
-├── 📋 requirements.txt               # Python dependencies
+├── README.md                      # Project overview & documentation
+├── requirements.txt               # Python dependencies
 │
-├── 📁 data/
-│   ├── raw/                         # Original, unmodified dataset
-│   │   └── APY.csv                  # Agricultural Productivity data
-│   └── processed/                   # Cleaned & transformed data
+├── data/
+│   ├── raw/                       # Original, unmodified dataset
+│   │   └── APY.csv                # Agricultural Productivity data
+│   └── processed/                 # Cleaned & transformed data
 │
-├── 📔 notebooks/
-│   ├── 01_extraction.ipynb          # Data sourcing & initial load
-│   ├── 02_cleaning.ipynb            # ETL & data quality checks
-│   ├── 03_eda.ipynb                 # Exploratory data analysis
+├── notebooks/
+│   ├── 01_extraction.ipynb        # Data sourcing & initial load
+│   ├── 02_cleaning.ipynb          # ETL & data quality checks
+│   ├── 03_eda.ipynb               # Exploratory data analysis
 │   ├── 04_statistical_analysis.ipynb # Statistical modeling & KPIs
-│   └── 05_final_load_prep.ipynb     # Dashboard preparation
+│   └── 05_final_load_prep.ipynb   # Dashboard preparation
 │
-├── 🐍 scripts/
+├── scripts/
 │   ├── __init__.py
-│   └── etl_pipeline.py              # Reusable ETL functions
+│   └── etl_pipeline.py            # Reusable ETL functions
 │
-├── 📊 tableau/
-│   ├── dashboard_links.md           # Tableau Public URLs
-│   └── screenshots/                 # Dashboard snapshots
+├── tableau/
+│   ├── dashboard_links.md         # Tableau Public URLs
+│   └── screenshots/               # Dashboard snapshots
 │
-├── 📚 reports/
+├── reports/
 │   ├── README.md
-│   ├── project_report_template.md   # Final written report
-│   └── presentation_outline.md      # Viva/presentation guide
+│   ├── project_report_template.md # Final written report
+│   └── presentation_outline.md    # Viva/presentation guide
 │
-├── 📖 docs/
-│   └── data_dictionary.md           # Column definitions & metadata
+├── docs/
+│   └── data_dictionary.md         # Column definitions & metadata
 │
-├── 🎓 DVA-focused-Portfolio/       # Portfolio piece documentation
+├── DVA-focused-Portfolio/         # Portfolio piece documentation
 │   └── README.md
 │
-└── 💼 DVA-oriented-Resume/         # Resume with project highlights
+└── DVA-oriented-Resume/           # Resume with project highlights
     └── README.md
 ```
 
 ---
 
-## 🔄 Analytical Pipeline
+## Analytical Pipeline
 
 Our structured 7-step methodology ensures rigorous, reproducible analysis:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│ 1️⃣  DEFINE  │ Problem scoped, data requirements identified       │
+│ 1. DEFINE   │ Problem scoped, data requirements identified       │
 ├─────────────────────────────────────────────────────────────────┤
-│ 2️⃣  EXTRACT │ Raw dataset sourced → data/raw/                   │
+│ 2. EXTRACT  │ Raw dataset sourced → data/raw/                   │
 ├─────────────────────────────────────────────────────────────────┤
-│ 3️⃣  CLEAN   │ ETL pipeline built (notebooks/02 & scripts/)      │
+│ 3. CLEAN    │ ETL pipeline built (notebooks/02 & scripts/)      │
 ├─────────────────────────────────────────────────────────────────┤
-│ 4️⃣  ANALYZE │ EDA + Statistical analysis (notebooks/03 & 04)    │
+│ 4. ANALYZE  │ EDA + Statistical analysis (notebooks/03 & 04)    │
 ├─────────────────────────────────────────────────────────────────┤
-│ 5️⃣  VISUALIZE│ Interactive Tableau dashboard created & published │
+│ 5. VISUALIZE│ Interactive Tableau dashboard created & published │
 ├─────────────────────────────────────────────────────────────────┤
-│ 6️⃣  RECOMMEND│ Actionable insights & recommendations delivered   │
+│ 6. RECOMMEND│ Actionable insights & recommendations delivered   │
 ├─────────────────────────────────────────────────────────────────┤
-│ 7️⃣  REPORT  │ Final report & presentation in reports/          │
+│ 7. REPORT   │ Final report & presentation in reports/          │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 
-| 🛠️ Tool | 📌 Status | 🎯 Purpose |
+| Tool | Status | Purpose |
 |---|---|---|
-| ![Python Badge](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square) | Mandatory | ETL, analysis, KPI computation |
-| ![Jupyter Badge](https://img.shields.io/badge/Jupyter-Notebook-orange?style=flat-square) | Mandatory | Interactive notebooks & documentation |
-| ![Tableau Badge](https://img.shields.io/badge/Tableau-Public-navy?style=flat-square) | Mandatory | Dashboard visualization & publishing |
-| ![GitHub Badge](https://img.shields.io/badge/GitHub-Mandatory-black?style=flat-square) | Mandatory | Version control & collaboration |
-| ![Pandas Badge](https://img.shields.io/badge/Pandas-Data%20Processing-green?style=flat-square) | Core | Data manipulation & cleaning |
-| ![NumPy Badge](https://img.shields.io/badge/NumPy-Numerical-lightblue?style=flat-square) | Core | Scientific computing |
-| ![Matplotlib Badge](https://img.shields.io/badge/Matplotlib-Visualization-yellow?style=flat-square) | Core | Statistical plotting |
-| ![Seaborn Badge](https://img.shields.io/badge/Seaborn-Advanced%20Viz-purple?style=flat-square) | Core | Statistical graphics |
-| ![SciPy Badge](https://img.shields.io/badge/SciPy-Statistics-orange?style=flat-square) | Recommended | Statistical testing |
-| ![StatsModels Badge](https://img.shields.io/badge/StatsModels-Modeling-red?style=flat-square) | Recommended | Regression & time-series |
-| ![SQL Badge](https://img.shields.io/badge/SQL-Optional-gray?style=flat-square) | Optional | Data extraction (if documented) |
+| Python 3.8+ | Mandatory | ETL, analysis, KPI computation |
+| Jupyter Notebook | Mandatory | Interactive notebooks & documentation |
+| Tableau Public | Mandatory | Dashboard visualization & publishing |
+| GitHub | Mandatory | Version control & collaboration |
+| Pandas | Core | Data manipulation & cleaning |
+| NumPy | Core | Scientific computing |
+| Matplotlib | Core | Statistical plotting |
+| Seaborn | Core | Statistical graphics |
+| SciPy | Recommended | Statistical testing |
+| StatsModels | Recommended | Regression & time-series |
+| SQL | Optional | Data extraction (if documented) |
 
 ---
 
-## 🎯 Evaluation Criteria
+## Evaluation Criteria
 
-## 🎯 Evaluation Criteria
-
-| Category | 📊 Points | ✅ Assessment Focus |
+| Category | Points | Assessment Focus |
 |---|---|---|
-| 🎲 **Problem Framing** | 10 | Clear, well-scoped business question with strategic relevance |
-| 🔧 **Data Quality & ETL** | 15 | Thorough cleaning pipeline with robust validation & documentation |
-| 📈 **Analysis Depth** | 25 | Correct statistical methods, advanced techniques, meaningful insights |
-| 📊 **Dashboard & Visualization** | 20 | Interactive, decision-relevant, professional Tableau dashboard |
-| 💡 **Business Recommendations** | 20 | Actionable insights directly tied to analysis with impact estimates |
-| 🎤 **Storytelling & Clarity** | 10 | Professional presentation, coherent narrative, clear communication |
+| Problem Framing | 10 | Clear, well-scoped business question with strategic relevance |
+| Data Quality & ETL | 15 | Thorough cleaning pipeline with robust validation & documentation |
+| Analysis Depth | 25 | Correct statistical methods, advanced techniques, meaningful insights |
+| Dashboard & Visualization | 20 | Interactive, decision-relevant, professional Tableau dashboard |
+| Business Recommendations | 20 | Actionable insights directly tied to analysis with impact estimates |
+| Storytelling & Clarity | 10 | Professional presentation, coherent narrative, clear communication |
 | **TOTAL** | **100** | |
 
-> ⭐ **Grading Philosophy**: Emphasis on analytical rigor & decision-relevance. Chart quantity and visual decoration are not prioritized over substance and actionability.
+**Grading Philosophy:** Emphasis on analytical rigor & decision-relevance. Chart quantity and visual decoration are not prioritized over substance and actionability.
 
 ---
 
-## ✅ Submission Checklist
+## Submission Checklist
 
-### 📦 GitHub Repository
+### GitHub Repository
 
 - [x] Public repository with correct naming: `SectionA_G17_IndiaAgriProductivity`
 - [ ] All 5 notebooks committed in `.ipynb` format
@@ -295,7 +289,7 @@ Our structured 7-step methodology ensures rigorous, reproducible analysis:
 - [ ] `README.md` - comprehensive project description
 - [ ] All team members have visible commits & pull requests
 
-### 📊 Tableau Dashboard
+### Tableau Dashboard
 
 - [ ] Published on Tableau Public with public access
 - [ ] At least one interactive filter (state, crop, year)
@@ -303,7 +297,7 @@ Our structured 7-step methodology ensures rigorous, reproducible analysis:
 - [ ] Professional formatting & color scheme
 - [ ] KPI metrics clearly displayed
 
-### 📄 Project Report
+### Project Report
 
 - [ ] PDF exported to `reports/`
 - [ ] Cover page with project title & team details
@@ -318,7 +312,7 @@ Our structured 7-step methodology ensures rigorous, reproducible analysis:
 - [ ] 3-5 actionable recommendations with impact
 - [ ] Contribution matrix aligned with GitHub history
 
-### 🎤 Presentation Deck
+### Presentation Deck
 
 - [ ] PDF exported to `reports/`
 - [ ] Title slide → Problem → Findings → Dashboard → Recommendations
@@ -326,7 +320,7 @@ Our structured 7-step methodology ensures rigorous, reproducible analysis:
 - [ ] Limitations clearly acknowledged
 - [ ] Professional design & readability
 
-### 💼 Individual Assets
+### Individual Assets
 
 - [ ] DVA-oriented resume updated with capstone details
 - [ ] Portfolio link or case study documentation added
@@ -334,25 +328,25 @@ Our structured 7-step methodology ensures rigorous, reproducible analysis:
 
 ---
 
-## 🤝 Team Contributions
+## Team Contributions
 
-| Team Member | 📊 Data & ETL | 🔍 EDA | 📈 Analysis | 📉 Dashboard | 📄 Report | 🎤 Presentation |
+| Team Member | Data & ETL | EDA | Analysis | Dashboard | Report | Presentation |
 |---|---|---|---|---|---|---|
-| _Member 1_ | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support |
-| _Member 2_ | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support |
-| _Member 3_ | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support |
-| _Member 4_ | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support |
-| _Member 5_ | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support |
+| Member 1 | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support |
+| Member 2 | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support |
+| Member 3 | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support |
+| Member 4 | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support |
+| Member 5 | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support | Lead / Support |
 
-**👤 Project Lead**: Pushpendra Singh Parihar  **📅 Date**: April 16, 2026
+**Project Lead:** Pushpendra Singh Parihar | **Date:** April 16, 2026
 
-**✍️ Declaration**: We confirm that contribution details are accurate and verifiable through GitHub Insights, PR history, and submitted artifacts.
+**Declaration:** We confirm that contribution details are accurate and verifiable through GitHub Insights, PR history, and submitted artifacts.
 
 ---
 
-## 📚 Key Resources & References
+## Key Resources & References
 
-| Resource | 📖 Link | 📝 Purpose |
+| Resource | Link | Purpose |
 |---|---|---|
 | Data Dictionary | [`docs/data_dictionary.md`](docs/data_dictionary.md) | Column definitions & metadata |
 | Dashboard | [Tableau Public](#) | Interactive KPI dashboard |
@@ -361,55 +355,49 @@ Our structured 7-step methodology ensures rigorous, reproducible analysis:
 
 ---
 
-## 📖 Best Practices Followed
+## Best Practices Followed
 
-✅ **Version Control**: All files committed to GitHub with clear commit messages  
-✅ **Reproducibility**: Complete documentation of data transformations & formulas  
-✅ **Code Quality**: Well-commented, modular Python code following PEP 8  
-✅ **Data Integrity**: Raw data never modified, clean separation of layers  
-✅ **Professional Output**: Publication-ready Tableau dashboard & formal report  
-✅ **Team Collaboration**: Documented contributions & transparent decision-making  
+✓ **Version Control:** All files committed to GitHub with clear commit messages
+✓ **Reproducibility:** Complete documentation of data transformations & formulas
+✓ **Code Quality:** Well-commented, modular Python code following PEP 8
+✓ **Data Integrity:** Raw data never modified, clean separation of layers
+✓ **Professional Output:** Publication-ready Tableau dashboard & formal report
+✓ **Team Collaboration:** Documented contributions & transparent decision-making  
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This project is completed as part of NST DVA Capstone. For inquiries or feedback:
 
-- **📧 Project Lead**: [Pushpendra Singh Parihar](https://github.com/makeprodigy)
-- **📊 Analysis Lead**: [Rohan Singh](https://github.com/r0hansng)
-- **📞 Questions**: Refer to reports/ for detailed methodology and findings
+- **Project Lead:** [Pushpendra Singh Parihar](https://github.com/makeprodigy)
+- **Analysis Lead:** [Rohan Singh](https://github.com/r0hansng)
+- **Questions:** Refer to reports/ for detailed methodology and findings
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License** - see LICENSE file for details.
 
 ---
 
-## 🎓 Acknowledgments
+## Acknowledgments
 
-- **Institution**: Newton School of Technology
-- **Program**: Data Visualization & Analytics Capstone
-- **Data Source**: Indian Government Agricultural Database
-- **Mentorship**: Faculty guidance & industry best practices
+- **Institution:** Newton School of Technology
+- **Program:** Data Visualization & Analytics Capstone
+- **Data Source:** Indian Government Agricultural Database
+- **Mentorship:** Faculty guidance & industry best practices
 
 ---
 
 <div align="center">
 
-### 🌾 Made with ❤️ by Team SectionA_G17
+
 
 ![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square)
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202026-blue?style=flat-square)
 
-[⬆ Back to Top](#-india-agricultural-productivity-analysis)
+[Back to Top](#india-agricultural-productivity-analysis)
 
 </div>
-
-All analysis, code, and recommendations in this repository must be the original work of the team listed above. Free-riding is tracked via GitHub Insights and pull request history. Any mismatch between the contribution matrix and actual commit history may result in individual grade adjustments.
-
----
-
-*Newton School of Technology - Data Visualization & Analytics | Capstone 2*
